@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2013 Yoshihiro Miyama
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <string name="app_name">TAG Notepad</string>
+
+    <string name="description_tag_list">タグリスト</string>
+    <string name="description_add_note">新規ノート</string>
+    <string name="description_add_tag">新規タグ</string>
+    <string name="description_open_note">開く</string>
+    <string name="description_append_tag">タグ</string>
+    <string name="description_tag">タグ</string>
+    <string name="description_input_tagname">タグ名を入力</string>
+    <string name="description_edit_tagname">タグ名の変更</string>
+    <string name="description_appended_notes">のノート</string>
+    <string name="description_edit">編集</string>
+    <string name="description_delete">削除</string>
+    <string name="description_allnotes_list">すべてのノート</string>
+    <string name="description_search">検索</string>
+    <string name="description_sort">並び替え</string>
+    <string name="description_preference">設定</string>
+    <string name="description_save">保存</string>
+    <string name="description_share">共有</string>
+    <string name="description_char_count">文字数:</string>
+    <string name="description_about">About</string>
+
+    <string name="description_note_title"> タイトル</string>
+    <string name="description_note_body"> 本文</string>
+
+    <string name="description_backup_success">バックアップが完了しました</string>
+    <string name="description_delete_backup_success">バックアップデータの削除が完了しました</string>
+    <string name="description_restore_success">復元が完了しました</string>
+    <string name="description_backup_notfound">バックアップデータがありません</string>
+    <string name="description_backup_error">エラーが発生しました: </string>
+    <string name="description_add">追加</string>
+    <string name="description_unnamed_tag">無名タグ</string>
+    <string name="description_untitled_note">無題</string>
+    <string name="description_mail_subject">[要望・バグ報告:TAG Notepad] </string>
+    <string name="description_mailto">mailto:kyakujin.app@gmail.com</string>
+
+    <string name="title_apend_tag">タグの付加</string>
+    <string name="title_backup">バックアップ</string>
+    <string name="title_delete_backup">バックアップの削除</string>
+    <string name="title_restore">復元</string>
+    <string name="alert_message_backup">現在のデータをバックアップしますか？\n\n(過去のバックアップデータは上書きされます)</string>
+    <string name="alert_message_delete_backup">過去に保存したデータを削除しますか？</string>
+    <string name="alert_message_restore">過去に保存したデータを復元しますか？\n\n(現在のデータは上書きされます)</string>
+
+    <string name="title_tag">タグリスト</string>
+    <string name="search_label">検索</string>
+    <string name="search_hint">ノートを検索</string>
+    <string name="alert_title_delete">削除確認</string>
+    <string name="alert_message_delete_note">このノートを削除しますか？</string>
+    <string name="alert_message_delete_tag">このタグを削除しますか？</string>
+    <string name="alert_title_sort">並び替え</string>
+    <string name="alert_title_about">About</string>
+
+    <string name="category_settings">設定</string>
+    <string name="category_backup_restore">バックアップと復元</string>
+
+    <string name="list_fontsize_title">文字の大きさ</string>
+    <string name="list_fontsize_summary">""</string>
+    <string name="list_pref_fontsize">文字の大きさ</string>
+    <string-array name="list_fontsize_entries">
+        <item>特大</item>
+        <item>大</item>
+        <item>中</item>
+        <item>小</item>
+        <item>極小</item>
+    </string-array>
+    <string-array name="list_fontsize_entryvalues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="list_charcounter_title">文字数カウンタの表示</string>
+    <string name="list_charcounter_summary">""</string>
+    <string name="list_pref_charcounter">文字数カウンタ</string>
+    <string-array name="list_charcounter_entries">
+        <item>表示する(改行数を除く)</item>
+        <item>表示する(改行数を含む)</item>
+        <item>表示しない</item>
+    </string-array>
+    <string-array name="list_charcounter_entryvalues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="list_sort_title">ノートの並び替え</string>
+    <string name="list_sort_summary">""</string>
+    <string name="list_pref_sort">並び順</string>
+    <string-array name="list_sort_entries">
+        <item>タイトル(昇順)</item>
+        <item>タイトル(降順)</item>
+        <item>変更日時(新しい順)</item>
+        <item>変更日時(古い順)</item>
+    </string-array>
+    <string-array name="list_sort_entryvalues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="about_body"><![CDATA[
+        <b>TAG Notepad</b><br>
+        Version %s<br>
+        <br>
+        TAG Notepadをダウンロードして頂き、ありがとうございます。<br>
+        <br>
+        このソフトウェアはApache License Version 2.0 に基づいてライセンスされます。
+        また、このソフトウェアを使用したことにより発生するいかなる損害、損失、不利益について、作者は責任を負いかねます。
+        予めご了承ください。<br>
+        <br>
+        ご要望や不具合等のご報告は、下記アドレスまでお願いいたします。
+    ]]></string>
+    <string name="mailto">kyakujin.app@gmail.com</string>
+
+</resources>

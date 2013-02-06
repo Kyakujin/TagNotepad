@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2013 Yoshihiro Miyama
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/category_settings" >
+
+        <ListPreference
+            android:defaultValue="3"
+            android:dialogTitle="@string/list_pref_fontsize"
+            android:entries="@array/list_fontsize_entries"
+            android:entryValues="@array/list_fontsize_entryvalues"
+            android:key="list_fontsize_key"
+            android:summary="@string/list_fontsize_summary"
+            android:title="@string/list_fontsize_title" />
+
+        <ListPreference
+            android:defaultValue="2"
+            android:dialogTitle="@string/list_pref_charcounter"
+            android:entries="@array/list_charcounter_entries"
+            android:entryValues="@array/list_charcounter_entryvalues"
+            android:key="list_charcounter_key"
+            android:summary="@string/list_charcounter_summary"
+            android:title="@string/list_charcounter_title" />
+
+        <ListPreference
+            android:defaultValue="3"
+            android:dialogTitle="@string/list_pref_sort"
+            android:entries="@array/list_sort_entries"
+            android:entryValues="@array/list_sort_entryvalues"
+            android:key="list_sort_key"
+            android:summary="@string/list_sort_summary"
+            android:title="@string/list_sort_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/category_backup_restore" >
+        <com.kyakujin.android.tagnotepad.ui.BackupDialogPreference
+            android:key="dialog_backup_key"
+            android:dialogIcon="@android:drawable/ic_dialog_alert"
+            android:title="@string/title_backup"
+            android:positiveButtonText="YES"
+            android:negativeButtonText="NO"
+            android:summary=""
+            />
+
+       <com.kyakujin.android.tagnotepad.ui.BackupDialogPreference
+            android:key="dialog_restore_key"
+            android:dialogIcon="@android:drawable/ic_dialog_alert"
+            android:title="@string/title_restore"
+            android:positiveButtonText="YES"
+            android:negativeButtonText="NO"
+            android:summary=""
+            />
+
+        <com.kyakujin.android.tagnotepad.ui.BackupDialogPreference
+            android:key="dialog_delete_backup_key"
+            android:dialogIcon="@android:drawable/ic_dialog_alert"
+            android:title="@string/title_delete_backup"
+            android:positiveButtonText="YES"
+            android:negativeButtonText="NO"
+            android:summary=""
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

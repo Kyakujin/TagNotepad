@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2013 Yoshihiro Miyama
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_tag"
+        android:icon="@drawable/ic_action_tag"
+        android:showAsAction="always"
+        android:title="@string/description_tag_list"/>
+
+    <item
+        android:id="@+id/menu_add_note"
+        android:icon="@drawable/ic_action_add"
+        android:showAsAction="always"
+        android:title="@string/description_add_note"/>
+
+    <item
+        android:id="@+id/menu_append_tag"
+        android:icon="@drawable/ic_action_append_tag"
+        android:showAsAction="always"
+        android:title="@string/description_append_tag"/>
+
+    <item
+        android:id="@+id/menu_edit"
+        android:icon="@drawable/ic_action_edit"
+        android:showAsAction="always"
+        android:title="@string/description_edit"/>
+
+    <item
+        android:id="@+id/menu_allnotes"
+        android:icon="@drawable/ic_menu_allnotes"
+        android:showAsAction="never"
+        android:title="@string/description_allnotes_list"/>
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="never"
+        android:title="@string/description_search"/>
+
+    <item
+        android:id="@+id/menu_preference"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:showAsAction="never"
+        android:title="@string/description_preference"/>
+
+    <item
+        android:id="@+id/menu_add_tag"
+        android:icon="@drawable/ic_action_add"
+        android:showAsAction="always"
+        android:title="@string/description_add_tag"/>
+
+
+    <item
+        android:id="@+id/menu_save"
+        android:icon="@drawable/ic_action_save"
+        android:showAsAction="always"
+        android:title="@string/description_save"/>
+
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:showAsAction="never"
+        android:title="@string/description_share"/>
+
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:showAsAction="never"
+        android:title="@string/description_about"/>
+
+</menu>
