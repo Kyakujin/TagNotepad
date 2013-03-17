@@ -21,17 +21,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-
-import com.kyakujin.android.tagnotepad.Config;
-import com.kyakujin.android.tagnotepad.util.FragmentUtils;
-import com.kyakujin.android.tagnotepad.R;
-import com.kyakujin.android.tagnotepad.provider.TagNoteContract;
-import com.kyakujin.android.tagnotepad.provider.TagNoteContract.Notes;
-
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.ContentUris;
@@ -42,6 +31,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -65,6 +55,17 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.actionbarsherlock.app.SherlockListFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+import com.kyakujin.android.tagnotepad.Config;
+import com.kyakujin.android.tagnotepad.R;
+import com.kyakujin.android.tagnotepad.provider.TagNoteContract;
+import com.kyakujin.android.tagnotepad.provider.TagNoteContract.Notes;
+import com.kyakujin.android.tagnotepad.util.FragmentUtils;
 
 /**
  * ノートをリスト表示するフラグメントクラス。
@@ -498,8 +499,14 @@ public class NoteListFragment extends SherlockListFragment {
                     if (mSearchWord != null) {
                         mSearchWord = mSearchWord.trim();
                         selection = TagNoteContract.Notes.SEARCH_SELECTION;
-                        argList.add(new String("%" + mSearchWord + "%"));
-                        argList.add(new String("%" + mSearchWord + "%"));
+                        if (mSearchWord.contains("%")) {
+                            mSearchWord = mSearchWord.replace("%", "$%");
+                        }
+                        if (mSearchWord.contains("_")) {
+                            mSearchWord = mSearchWord.replace("_", "$_");
+                        }
+                        argList.add(new String(mSearchWord));
+                        argList.add(new String(mSearchWord));
                     }
                     // タグリストから遷移してきた場合(タグ名をwhere条件に含める)
                     if (mSelectedTag != null) {

@@ -94,8 +94,10 @@ public class TagNoteContract {
 
         /** 検索ワードによるノート検索時のwhere条件 */
         public static final String SEARCH_SELECTION =
-                Tables.NOTES + "." + Notes.TITLE + " LIKE ?"
-                + " OR " + Tables.NOTES + "." + Notes.BODY + " LIKE ?";
+                Tables.NOTES + "." + Notes.TITLE + "  LIKE '%' || ? || '%'"
+                 + " ESCAPE '$'"
+                + " OR " + Tables.NOTES + "." + Notes.BODY + "  LIKE '%' || ? || '%'"
+                + " ESCAPE '$'" ;
 
         /**
          * 指定したノートID(_idの値)からURIを生成
