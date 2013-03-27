@@ -108,10 +108,10 @@ public class TagNoteProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection,
             String[] selectionArgs, String sortOrder) {
-        Log.d(TAG,
-                "query: uri=" + uri + "," + "projection=" + Arrays.toString(projection)
-                        + "," + "selection=" + selection + "," + "selectionArgs="
-                        + Arrays.toString(selectionArgs));
+//        Log.d(TAG,
+//                "query: uri=" + uri + "," + "projection=" + Arrays.toString(projection)
+//                        + "," + "selection=" + selection + "," + "selectionArgs="
+//                        + Arrays.toString(selectionArgs));
 
         final SQLiteDatabase db = mOpenHelper.getReadableDatabase();
         final SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -135,6 +135,7 @@ public class TagNoteProvider extends ContentProvider {
                             + " ON " + Tables.MAPPING + "." + Mapping.TAGID + " = "
                             + Tables.TAGS + "." + Tags._ID
                             + selection + " " + order + ";";
+
                     Cursor c = db.rawQuery(sql, selectionArgs);
                     c.setNotificationUri(getContext().getContentResolver(), uri);
                     return c;
@@ -181,7 +182,7 @@ public class TagNoteProvider extends ContentProvider {
             values = new ContentValues();
         }
 
-        Log.d(TAG, "insert: uri=" + uri + "," + "values=" + values);
+//        Log.d(TAG, "insert: uri=" + uri + "," + "values=" + values);
 
         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         String tableName;
@@ -242,7 +243,7 @@ public class TagNoteProvider extends ContentProvider {
             getContext().getContentResolver().notifyChange(insertUri, null);
             return insertUri;
         }
-        Log.d("debug", "insert: rowId = " + rowId);
+//        Log.d("debug", "insert: rowId = " + rowId);
         return null;
     }
 
@@ -253,7 +254,7 @@ public class TagNoteProvider extends ContentProvider {
      */
     @Override
     public int delete(Uri uri, String where, String[] whereArgs) {
-        Log.d(TAG, "delete: uri=" + uri);
+        //Log.d(TAG, "delete: uri=" + uri);
 
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         String tableName;
@@ -301,7 +302,7 @@ public class TagNoteProvider extends ContentProvider {
     @Override
     public int update(Uri uri, ContentValues values, String where,
             String[] whereArgs) {
-        Log.d(TAG, "update:uri=" + uri + "," + "values=" + values.toString());
+//        Log.d(TAG, "update:uri=" + uri + "," + "values=" + values.toString());
 
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         String tableName;
